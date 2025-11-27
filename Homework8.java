@@ -1,4 +1,3 @@
-// Homework8.java
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -45,3 +44,4 @@ public class Homework8 {
         sc.close();
     }
 }
+
