@@ -23,13 +23,13 @@ class InkjetPrinter extends Printer {
     @Override
     public boolean print() {
         if (availableCount == 0) {
-            // 실패 메시지 출력 후 false 리턴
+          
             System.out.println(
                     model + ": " + (printedCount + 1) + "매째 인쇄 실패 - 잉크 부족."
             );
             return false;
         } else {
-            // 정상 인쇄: 카운트 조정 후 true 리턴
+           
             printedCount++;
             availableCount--;
             return true;
@@ -37,7 +37,7 @@ class InkjetPrinter extends Printer {
     }
 }
 
-// 레이저 프린터
+
 class LaserPrinter extends Printer {
 
     public LaserPrinter(String model, int availableCount) {
@@ -47,13 +47,13 @@ class LaserPrinter extends Printer {
     @Override
     public boolean print() {
         if (availableCount == 0) {
-            // 실패 메시지 출력 후 false 리턴
+    
             System.out.println(
                     model + ": " + (printedCount + 1) + "매째 인쇄 실패 - 토너 부족."
             );
             return false;
         } else {
-            // 정상 인쇄: 카운트 조정 후 true 리턴
+        
             printedCount++;
             availableCount--;
             return true;
@@ -61,7 +61,7 @@ class LaserPrinter extends Printer {
     }
 }
 
-// 메인 클래스
+
 public class Homework7 {
     public static void main(String[] args) {
         InkjetPrinter inkjet =
@@ -77,4 +77,5 @@ public class Homework7 {
             // 토너가 떨어질 때까지 반복
         }
     }
+
 }
